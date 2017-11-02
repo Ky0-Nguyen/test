@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "react-native"
+  ],
+  "plugins": [
+    ["babel-plugin-root-import", 
+      [{
+      "rootPathPrefix": "~", // `~` is the default so you can remove this if you want 
+      "rootPathSuffix": "./src/backend"
+    }, {
+      "rootPathPrefix": "@",
+      "rootPathSuffix": "./src/frontend"
+    }, {
+      "rootPathPrefix": "$",
+      "rootPathSuffix": "./src/global" // since we suport relative paths you can also go into a parent directory 
+    }, {
+      "rootPathPrefix": "#",
+      "rootPathSuffix": "./src/redux" 
+    }
+    ]]
+  ]
+}

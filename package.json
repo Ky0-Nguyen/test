@@ -1,0 +1,105 @@
+{
+  "name": "noahwallet",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --ignore-pattern generated.*",
+    "validate": "npm ls",
+    "postinstall": "rn-nodeify --install stream,buffer,events,assert,crypto,vm --hack"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bignumber.js": "^4.1.0",
+    "crypto-js": "^3.1.9-1",
+    "ethereumjs-tx": "^1.3.3",
+    "ethereumjs-wallet-react-native": "^0.6.6",
+    "events": "^1.1.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.0",
+    "numeral": "^2.0.6",
+    "query-string": "^5.0.0",
+    "react": "16.0.0-beta.5",
+    "react-native": "0.49.1",
+    "react-native-bip39": "^2.3.0",
+    "react-native-bitcoinjs-lib": "^2.3.9",
+    "react-native-camera": "^0.10.0",
+    "react-native-dimension": "^1.0.6",
+    "react-native-drawer": "^2.5.0",
+    "react-native-global-props": "^1.1.1",
+    "react-native-i18n": "^2.0.6",
+    "react-native-loading-spinner-overlay": "^0.5.2",
+    "react-native-modalbox": "^1.4.2",
+    "react-native-popover-tooltip": "^1.1.1",
+    "react-native-qrcode": "^0.2.6",
+    "react-native-randombytes": "^3.0.0",
+    "react-native-router-flux": "^4.0.0-beta.21",
+    "react-native-simple-store": "^1.3.0",
+    "react-native-spinkit": "^1.1.1",
+    "react-native-vector-icons": "^4.4.0",
+    "react-navigation": "^1.0.0-beta.13",
+    "react-redux": "^5.0.6",
+    "reactotron-react-native": "^1.12.3",
+    "reactotron-redux": "^1.12.2",
+    "readable-stream": "^1.1.14",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "stream-browserify": "^1.0.0",
+    "vm-browserify": "0.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "21.2.0",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype-errors": "^3.3.3",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react-native": "^3.1.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.56.0",
+    "jest": "21.2.1",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/frontend/assets/fonts/"
+    ]
+  },
+  "react-native": {
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "vm": "vm-browserify"
+  },
+  "browser": {
+    "_stream_transform": "readable-stream/transform",
+    "_stream_readable": "readable-stream/readable",
+    "_stream_writable": "readable-stream/writable",
+    "_stream_duplex": "readable-stream/duplex",
+    "_stream_passthrough": "readable-stream/passthrough",
+    "stream": "stream-browserify",
+    "crypto": "react-native-crypto",
+    "vm": "vm-browserify"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
+}
